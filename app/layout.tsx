@@ -25,7 +25,11 @@ export const metadata: Metadata = {
     description: 'Estratégia, criatividade, mídia e execução para colocar marcas em movimento.',
   },
   twitter: { card: 'summary', title: 'Invista Comunicação', description: 'Estratégia, criação e resultado desde 2002.' },
-  icons: { icon: '/favicon.svg' },
+  icons: {
+    icon: [{ url: '/favicon-invista.png', type: 'image/png', sizes: '64x64' }],
+    shortcut: '/favicon-invista.png',
+    apple: [{ url: '/apple-touch-icon.png', type: 'image/png', sizes: '180x180' }],
+  },
 };
 
 const organizationSchema = {
