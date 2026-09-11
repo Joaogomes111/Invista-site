@@ -10,31 +10,12 @@ const navigation = [
   { label: 'Contato', href: '#contato' },
 ];
 
-export function BrandLockup({ footer = false }: { footer?: boolean }) {
-  return (
-    <span className={`brand-lockup${footer ? ' brand-lockup-footer' : ''}`}>
-      <Image
-        className="brand-lockup-symbol"
-        src="/brand/invista-symbol-transparent.webp"
-        alt=""
-        width={640}
-        height={640}
-        aria-hidden="true"
-      />
-      <span className="brand-lockup-copy">
-        <strong>INVISTA</strong>
-        <small>COMUNICAÇÃO</small>
-      </span>
-    </span>
-  );
-}
-
 export function SiteHeader({ solid = false }: { solid?: boolean }) {
   return (
     <header className={`site-header ${solid ? 'site-header-solid' : ''}`}>
       <div className="site-shell flex h-[76px] items-center justify-between gap-6">
         <Link href="/" aria-label="Invista Comunicação — página inicial" className="shrink-0">
-          <BrandLockup />
+          <Image src="/brand/invista-logo.png" alt="Invista Comunicação" width={180} height={54} priority />
         </Link>
 
         <nav aria-label="Navegação principal" className="hidden items-center gap-8 lg:flex">

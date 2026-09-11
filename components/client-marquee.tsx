@@ -42,11 +42,8 @@ export function ClientMarquee() {
   return (
     <section className="clients-strip" id="clientes" aria-label="Clientes da Invista">
       <div className="site-shell clients-intro">
-        <div>
-          <p className="eyebrow">Marcas em movimento</p>
-          <h2>Empresas que tomaram essa decisão.</h2>
-        </div>
-        <p>Marcas que já escolheram a Invista para colocar sua comunicação em movimento.</p>
+        <p className="eyebrow">Marcas em movimento</p>
+        <h2>Empresas que tomaram essa decisão.</h2>
       </div>
       <div className="clients-marquee">
         <div className="marquee-track">

@@ -1,6 +1,6 @@
+import Image from 'next/image';
 import Link from 'next/link';
 import { ArrowUpRight, AtSign, MapPin, Phone } from 'lucide-react';
-import { BrandLockup } from '@/components/site-header';
 
 const mapsUrl =
   'https://www.google.com/maps/search/?api=1&query=Rua+Alc%C3%ADdes+Pereira%2C+280%2C+Fazenda%2C+Itaja%C3%AD+-+SC';
@@ -26,7 +26,7 @@ export function SiteFooter() {
 
         <div className="footer-grid">
           <div>
-            <BrandLockup footer />
+            <Image src="/brand/invista-logo.png" alt="Invista Comunicação" width={190} height={58} />
             <p className="footer-note">Comunicação, estratégia e criatividade desde 2002.</p>
           </div>
           <div>
