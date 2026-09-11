@@ -227,60 +227,9 @@ summary {
   background: var(--ink);
 }
 
-.brand-lockup {
-  display: inline-flex;
+.site-header img {
   width: 10.4rem;
-  align-items: center;
-  gap: 0.48rem;
-  color: var(--white);
-  line-height: 1;
-}
-
-.brand-lockup-symbol {
-  width: 2.35rem;
-  height: 2.35rem;
-  flex: none;
-  object-fit: contain;
-}
-
-.brand-lockup-copy {
-  display: flex;
-  min-width: 0;
-  flex: 1;
-  flex-direction: column;
-}
-
-.brand-lockup-copy strong {
-  font-size: 1.48rem;
-  font-weight: 900;
-  letter-spacing: -0.075em;
-  line-height: 0.78;
-}
-
-.brand-lockup-copy small {
-  margin-top: 0.38rem;
-  font-size: 0.39rem;
-  font-weight: 850;
-  letter-spacing: 0.29em;
-  line-height: 1;
-  white-space: nowrap;
-}
-
-.brand-lockup-footer {
-  width: 11.9rem;
-}
-
-.brand-lockup-footer .brand-lockup-symbol {
-  width: 2.7rem;
-  height: 2.7rem;
-}
-
-.brand-lockup-footer .brand-lockup-copy strong {
-  font-size: 1.7rem;
-}
-
-.brand-lockup-footer .brand-lockup-copy small {
-  font-size: 0.45rem;
+  height: auto;
 }
 
 .site-header .header-diagnostic {
@@ -544,34 +493,23 @@ summary {
 }
 
 .clients-intro {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(16rem, 0.42fr);
-  gap: clamp(2rem, 7vw, 7rem);
-  align-items: end;
-  padding-top: clamp(2.4rem, 4vw, 3.8rem);
-  padding-bottom: clamp(1.3rem, 2vw, 2rem);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-top: clamp(1.7rem, 3vw, 2.6rem);
+  padding-bottom: clamp(1rem, 1.6vw, 1.45rem);
 }
 
 .clients-intro .eyebrow {
-  margin-bottom: 0.8rem;
+  margin-bottom: 0.55rem;
 }
 
 .clients-intro h2 {
-  max-width: 18ch;
   margin: 0;
-  font-size: clamp(1.8rem, 3vw, 3rem);
+  font-size: clamp(1.35rem, 2.25vw, 2.1rem);
   font-weight: 820;
   letter-spacing: -0.045em;
-  line-height: 1;
-  text-wrap: balance;
-}
-
-.clients-intro > p {
-  max-width: 31rem;
-  margin: 0;
-  color: rgba(255, 255, 255, 0.62);
-  font-size: clamp(0.85rem, 1.15vw, 1rem);
-  line-height: 1.6;
+  line-height: 1.05;
 }
 
 .clients-marquee {
@@ -2254,32 +2192,17 @@ summary {
 }
 
 @media (max-width: 560px) {
-  .brand-lockup {
+  .site-header img {
     width: 8.8rem;
   }
 
-  .brand-lockup-symbol {
-    width: 2rem;
-    height: 2rem;
-  }
-
-  .brand-lockup-copy strong {
-    font-size: 1.25rem;
-  }
-
-  .brand-lockup-copy small {
-    margin-top: 0.32rem;
-    font-size: 0.33rem;
-  }
-
   .clients-intro {
-    gap: 1rem;
-    padding-top: 2.25rem;
-    padding-bottom: 1rem;
+    padding-top: 1.5rem;
+    padding-bottom: 0.85rem;
   }
 
   .clients-intro h2 {
-    font-size: 1.75rem;
+    font-size: 1.4rem;
   }
 
   .hero {
