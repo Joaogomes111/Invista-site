@@ -3,12 +3,6 @@ import Link from 'next/link';
 import {
   ArrowRight,
   ArrowUpRight,
-  CalendarDays,
-  ChartNoAxesCombined,
-  Megaphone,
-  MonitorSmartphone,
-  Palette,
-  Share2,
 } from 'lucide-react';
 import { BlogCard } from '@/components/blog-card';
 import { CasesShowcase } from '@/components/cases-showcase';
@@ -17,16 +11,8 @@ import { CountUp } from '@/components/count-up';
 import { ShaderHero } from '@/components/shader-hero';
 import { SiteFooter } from '@/components/site-footer';
 import { SiteHeader } from '@/components/site-header';
+import { ServicesCarousel } from '@/components/services-carousel';
 import { getPostSummaries } from '@/lib/blog';
-
-const services = [
-  { icon: Megaphone, title: 'Campanhas publicitárias', text: 'Conceito, planejamento de mídia e execução integrada para sua marca aparecer com consistência em todos os canais.' },
-  { icon: Palette, title: 'Branding & design', text: 'Marcas, identidades visuais e materiais que traduzem a essência do negócio e sustentam seu posicionamento.' },
-  { icon: Share2, title: 'Redes sociais', text: 'Estratégia editorial, criação e gestão de conteúdo para construir presença, relacionamento e lembrança.' },
-  { icon: ChartNoAxesCombined, title: 'Mídia & performance', text: 'Meta Ads, Google Ads, análise de dados e otimização contínua para transformar investimento em oportunidade.' },
-  { icon: MonitorSmartphone, title: 'Sites & landing pages', text: 'Experiências digitais rápidas e estratégicas, pensadas para posicionar, explicar e converter.' },
-  { icon: CalendarDays, title: 'Eventos & ativações', text: 'Planejamento, comunicação e execução para aproximar marcas e pessoas em experiências que ficam na memória.' },
-];
 
 export default function Home() {
   const latestPosts = getPostSummaries().slice(0, 3);
@@ -60,18 +46,7 @@ export default function Home() {
             </div>
             <p>Estratégia e criação trabalhando juntas, do posicionamento à performance.</p>
           </div>
-          <div className="services-grid">
-            {services.map((service) => {
-              const Icon = service.icon;
-              return (
-                <article className="service-card" key={service.title}>
-                  <div className="service-card-top"><Icon aria-hidden="true" /></div>
-                  <h3>{service.title}</h3>
-                  <p>{service.text}</p>
-                </article>
-              );
-            })}
-          </div>
+          <ServicesCarousel />
         </div>
       </section>
 

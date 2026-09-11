@@ -45,14 +45,22 @@
 }
 
 html {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+  overscroll-behavior-x: none;
   scroll-behavior: smooth;
   background: var(--ink);
 }
 
 body {
+  position: relative;
+  width: 100%;
+  max-width: 100%;
   min-width: 320px;
   margin: 0;
   overflow-x: hidden;
+  overscroll-behavior-x: none;
   background: var(--paper);
   color: var(--ink);
   font-family: var(--font-montserrat), Arial, Helvetica, sans-serif;
@@ -87,6 +95,7 @@ summary {
 
 .site-shell {
   width: var(--shell);
+  max-width: 100%;
   margin-inline: auto;
 }
 
@@ -221,6 +230,16 @@ summary {
 .site-header img {
   width: 10.4rem;
   height: auto;
+}
+
+.site-header .header-diagnostic {
+  display: none;
+}
+
+@media (min-width: 640px) {
+  .site-header .header-diagnostic {
+    display: inline-flex;
+  }
 }
 
 .nav-link {
@@ -631,6 +650,7 @@ summary {
 }
 
 .services-grid {
+  position: relative;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   border-top: 1px solid rgba(255, 255, 255, 0.18);
@@ -638,11 +658,16 @@ summary {
 }
 
 .service-card {
+  min-width: 0;
   min-height: 14.5rem;
   padding: clamp(1.4rem, 2.25vw, 2rem);
   border-right: 1px solid rgba(255, 255, 255, 0.18);
   border-bottom: 1px solid rgba(255, 255, 255, 0.18);
   transition: background 220ms ease, color 220ms ease;
+}
+
+.services-carousel-controls {
+  display: none;
 }
 
 .service-card:hover {
@@ -1977,7 +2002,7 @@ summary {
 .whatsapp-float {
   position: fixed;
   z-index: 60;
-  right: clamp(1rem, 2vw, 2rem);
+  right: max(clamp(1rem, 2vw, 2rem), env(safe-area-inset-right));
   bottom: clamp(1rem, 2vw, 2rem);
   display: grid;
   width: 3.75rem;
@@ -2190,7 +2215,11 @@ summary {
 
   .services-grid {
     display: flex;
+    width: 100%;
+    max-width: 100%;
     overflow-x: auto;
+    overscroll-behavior-x: contain;
+    scroll-behavior: smooth;
     scroll-snap-type: x mandatory;
     scrollbar-width: none;
   }
@@ -2200,13 +2229,57 @@ summary {
   }
 
   .service-card {
-    flex: 0 0 min(82vw, 22rem);
+    flex: 0 0 100%;
     min-height: 15rem;
     scroll-snap-align: start;
+    scroll-snap-stop: always;
   }
 
   .service-card-top {
     margin-bottom: 2.5rem;
+  }
+
+  .services-carousel-controls {
+    display: flex;
+    align-items: center;
+    gap: 0.65rem;
+    margin-top: 1rem;
+  }
+
+  .services-carousel-progress {
+    margin-right: auto;
+    color: rgba(255, 255, 255, 0.58);
+    font-size: 0.68rem;
+    font-weight: 800;
+    letter-spacing: 0.12em;
+  }
+
+  .services-carousel-button {
+    display: grid;
+    width: 2.85rem;
+    height: 2.85rem;
+    padding: 0;
+    place-items: center;
+    border: 1px solid rgba(255, 255, 255, 0.38);
+    border-radius: 50%;
+    background: transparent;
+    color: var(--white);
+  }
+
+  .services-carousel-button svg {
+    width: 1.1rem;
+    height: 1.1rem;
+  }
+
+  .services-carousel-button-next {
+    border-color: var(--yellow);
+    background: var(--yellow);
+    color: var(--ink);
+  }
+
+  .services-carousel-button:disabled {
+    cursor: default;
+    opacity: 0.28;
   }
 
   .case-showcase-controls {
@@ -2265,6 +2338,8 @@ summary {
   }
 
   .whatsapp-float {
+    right: max(0.9rem, env(safe-area-inset-right));
+    bottom: max(0.9rem, env(safe-area-inset-bottom));
     width: 3.35rem;
     height: 3.35rem;
   }

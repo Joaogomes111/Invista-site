@@ -27,7 +27,7 @@ export function SiteHeader({ solid = false }: { solid?: boolean }) {
         </nav>
 
         <Link
-          className="button button-small hidden sm:inline-flex"
+          className="button button-small header-diagnostic hidden sm:inline-flex"
           href="/diagnostico/"
         >
           Diagnóstico gratuito <ArrowUpRight size={17} aria-hidden="true" />
