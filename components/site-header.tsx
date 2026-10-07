@@ -15,7 +15,7 @@ export function SiteHeader({ solid = false }: { solid?: boolean }) {
     <header className={`site-header ${solid ? 'site-header-solid' : ''}`}>
       <div className="site-shell flex h-[76px] items-center justify-between gap-6">
         <Link href="/" aria-label="Invista Comunicação — página inicial" className="shrink-0">
-          <Image src="/brand/invista-logo.png" alt="Invista Comunicação" width={180} height={54} priority />
+          <Image src="/brand/invista-logo-hd.png" alt="Invista Comunicação" width={180} height={61} priority />
         </Link>
 
         <nav aria-label="Navegação principal" className="hidden items-center gap-8 lg:flex">

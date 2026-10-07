@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import { ArrowUpRight, AtSign, MapPin, Phone } from 'lucide-react';
+import { ArrowUpRight, AtSign, Mail, MapPin, Phone } from 'lucide-react';
 
 const mapsUrl =
   'https://www.google.com/maps/search/?api=1&query=Rua+Alc%C3%ADdes+Pereira%2C+280%2C+Fazenda%2C+Itaja%C3%AD+-+SC';
@@ -26,7 +26,7 @@ export function SiteFooter() {
 
         <div className="footer-grid">
           <div>
-            <Image src="/brand/invista-logo.png" alt="Invista Comunicação" width={190} height={58} />
+            <Image src="/brand/invista-logo-hd.png" alt="Invista Comunicação" width={190} height={64} />
             <p className="footer-note">Comunicação, estratégia e criatividade desde 2002.</p>
           </div>
           <div>
@@ -38,6 +38,7 @@ export function SiteFooter() {
           <div>
             <p className="footer-title">Contato</p>
             <a href="tel:+5547996240055"><Phone size={16} /> (47) 99624-0055</a>
+            <a href="mailto:contato@invistacomunicacao.com.br"><Mail size={16} /> contato@invistacomunicacao.com.br</a>
             <a href="https://www.instagram.com/invista.comunicacao/" target="_blank" rel="noreferrer">
               <AtSign size={16} /> invista.comunicacao
             </a>

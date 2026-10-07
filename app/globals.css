@@ -1044,6 +1044,7 @@ summary {
 .about-copy h2 {
   max-width: 14ch;
   font-size: clamp(2.7rem, 5vw, 5.3rem);
+  line-height: 1.06;
 }
 
 .about-copy > p:not(.eyebrow) {

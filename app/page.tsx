@@ -74,7 +74,7 @@ export default function Home() {
 
       <section className="about-section" id="sobre">
         <div className="site-shell about-grid">
-          <div className="about-mark" aria-hidden="true"><Image src="/brand/invista-symbol-transparent.webp" alt="" width={388} height={388} /></div>
+          <div className="about-mark" aria-hidden="true"><Image src="/brand/invista-symbol-hd.png" alt="" width={388} height={388} /></div>
           <div className="about-copy">
             <p className="eyebrow dark">A Invista</p>
             <h2>Experiência para enxergar o todo. Curiosidade para continuar evoluindo.</h2>
