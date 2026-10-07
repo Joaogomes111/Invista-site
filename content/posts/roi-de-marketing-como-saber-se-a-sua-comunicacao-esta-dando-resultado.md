@@ -6,10 +6,6 @@ image: /blog/25_09-Post_ROI-de-marketing.png
 draft: false
 ---
 
-Sim. O problema eram as barras \ antes dos títulos, listas e destaques. No TinaCMS, cole o conteúdo abaixo diretamente no campo Texto do artigo.
-
-Título: ROI de marketing: como saber se suas campanhas realmente dão resultado
-
 Resumo do card: Alcance, cliques e leads ajudam a acompanhar uma campanha, mas o ROI mostra se o investimento em marketing está contribuindo para vendas e crescimento.
 
 Os relatórios mostram alcance, cliques e leads. Mas, no fim, fica a pergunta: esse investimento está realmente trazendo resultado para o negócio?
